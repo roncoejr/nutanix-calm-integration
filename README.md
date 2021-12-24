@@ -18,8 +18,10 @@ Code base that I use to demonstrate the ability to tap the Nutanix Calm API exte
 ### config.json template
 
 ```
+{
 	"uuid": "",
 	"name": ""
+}
 ```
 
 
