@@ -3,6 +3,13 @@ Code base that I use to demonstrate the ability to tap the Nutanix Calm API exte
 
 ## Overview
 
+## Configuration Requirements
+
+### backend.json
+
+### config.json
+
+
 ## Nutanix Calm (Cloud Automation and Lifecycle Management)
 
 ## Scenario One
