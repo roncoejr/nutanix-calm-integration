@@ -2,6 +2,13 @@
 <head>
 	<script language="Javascript" src="js/calm-int.js"></script>
 	<link rel="stylesheet" src="">
+	<?php
+		$json_backend = file_get_contents('backend.json');
+		$json_config = file_get_contents('config.json');
+
+		$m_backend = json_decode($json_backend);
+		$m_config = json_decode($json_config);
+	?>
 	<title></title>
 </head>
 <body>
@@ -13,12 +20,12 @@
 			<tr><td><input id="btn_clear" name="btn_clear" type="button" value="CLEAR"></td><td><input id="btn_submit" name="btn_submit" type="button" onclick="m_launchApplication(0)" value="SUBMIT"></tr>
 			<tr><td><div id="infoPanel" name="infoPanel"></div></td></tr>
 		</table>
-		<input id="app_blueprint_uuid" name="app_blueprint_uuid" type="hidden" value="">
-		<input id="app_blueprint_name" name="app_blueprint_name" type="hidden" value="">
+		<input id="app_blueprint_uuid" name="app_blueprint_uuid" type="hidden" value="<?php $m_config->uuid ?>">
+		<input id="app_blueprint_name" name="app_blueprint_name" type="hidden" value="<?php $m_config->name ?>">
 		<input id="app_blueprint_profile" name="app_blueprint_profile" type="hidden" value="app_profile">
-		<input id="hostIP" name="hostIP" type="hidden" value="app_profile">
-		<input id="hostPort" name="hostPort" type="hidden" value="app_profile">
-		<input id="hostEndPoint" name="hostEndPoint" type="hidden" value="app_profile">
+		<input id="hostIP" name="hostIP" type="hidden" value="<?php $m_backend->hostIP ?>">
+		<input id="hostPort" name="hostPort" type="hidden" value="<?php $m_backend->hostPort ?>">
+		<input id="hostEndPoint" name="hostEndPoint" type="hidden" value="<?php $m_backend->hostEndPoint ?>">
 		<input id="t_app_profile_name" name="t_app_profile_name" type="hidden" value="app_profile">
 	</form>
 </body>
