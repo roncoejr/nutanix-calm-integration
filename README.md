@@ -5,9 +5,22 @@ Code base that I use to demonstrate the ability to tap the Nutanix Calm API exte
 
 ## Configuration Requirements
 
-### backend.json
+### backend.json template
 
-### config.json
+```
+{
+	"hostIP": "",
+	"hostPort": "",
+	"hostEndPoint": ""
+}
+```
+
+### config.json template
+
+```
+	"uuid": "",
+	"name": ""
+```
 
 
 ## Nutanix Calm (Cloud Automation and Lifecycle Management)
