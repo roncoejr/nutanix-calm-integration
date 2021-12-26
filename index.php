@@ -9,9 +9,11 @@
 		$m_backend = json_decode($json_backend);
 		$m_config = json_decode($json_config);
 	?>
-	<title></title>
+	<title>Generic App</title>
 </head>
 <body>
+	<h1>Generic App</h1>
+	<h3>I'm not much to look at, but I'm here to prove a point</h3>
 	<form id="app_form" name="app_form" action="POST" method="">
 		<table id="tbl_one" name="tbl_one">
 			<tr><th></th><th></th></tr>
@@ -21,6 +23,7 @@
 			<tr><td><div id="infoPanel" name="infoPanel"></div></td></tr>
 		</table>
 		<input id="app_blueprint_uuid" name="app_blueprint_uuid" type="hidden" value="<?php echo $m_config->bp_uuid ?>">
+		<input id="app_uuid" name="app_uuid" type="hidden" value="<?php echo $m_config->app_uuid ?>">
 		<input id="app_blueprint_name" name="app_blueprint_name" type="hidden" value="<?php echo $m_config->bp_name ?>">
 		<input id="app_blueprint_profile" name="app_blueprint_profile" type="hidden" value="app_profile">
 		<input id="hostIP" name="hostIP" type="hidden" value="<?php echo $m_backend->hostIP ?>">
