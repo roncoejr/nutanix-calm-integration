@@ -3,8 +3,8 @@
 	<script language="Javascript" src="js/calm-int.js"></script>
 	<link rel="stylesheet" type="text/css" href="">
 	<?php
-		$json_backend = file_get_contents('backend.json');
-		$json_config = file_get_contents('config.json');
+		$json_backend = file_get_contents('../backend.json');
+		$json_config = file_get_contents('../config.json');
 
 		$m_backend = json_decode($json_backend);
 		$m_config = json_decode($json_config);
