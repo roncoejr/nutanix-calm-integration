@@ -19,9 +19,11 @@
 			<tr><th></th><th></th></tr>
 			<tr><td>Application Name:</td><td><input id="app_name" name="app_name" type="text" width="55"></td></tr>
 			<tr><td>Application Description:</td><td><input id="app_description" name="app_description" type="text" width="255" height="15"></td></tr>
+			<tr><td>Username:</td><td><input id="app_username" name="app_username" type="text" width="255" height="15" value=""></td></tr>
+			<tr><td>Password:</td><td><input id="app_password" name="app_password" type="password" width="255" height="15" value=""></td></tr>
 			<tr><td><input id="btn_clear" name="btn_clear" type="button" value="CLEAR"></td><td><input id="btn_submit" name="btn_submit" type="button" value="SUBMIT" onclick="m_launchApplication(0)"></td></tr>
-			<tr><td><div id="infoPanel" name="infoPanel"></div></td></tr>
 		</table>
+			<p><div id="infoPanel" name="infoPanel"></div></p>
 		<input id="app_blueprint_uuid" name="app_blueprint_uuid" type="hidden" value="<?php echo $m_config->bp_uuid ?>">
 		<input id="app_uuid" name="app_uuid" type="hidden" value="<?php echo $m_config->app_uuid ?>">
 		<input id="app_blueprint_name" name="app_blueprint_name" type="hidden" value="<?php echo $m_config->bp_name ?>">

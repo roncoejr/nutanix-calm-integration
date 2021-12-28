@@ -1,0 +1,14 @@
+{
+"spec":
+        {
+                "app_profile_reference":
+                                        {
+                                                "kind":"app_profile",
+                                                "name":"rcj_test_multi",
+                                                "uuid":"780c7e5b-689d-bb1a-f343-1c492b67fc33"
+                                        },
+                "app_name":"rcj Hybrid launch",
+                "app_description":"Using the API to launch the blueprint"
+        }
+}
+
