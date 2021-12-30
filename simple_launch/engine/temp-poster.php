@@ -40,9 +40,12 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
+$m_pattern = '/1$';
+$m_str = '1';
+
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+  echo preg_replace($m_pattern, $response, $m_str);
 }
 ?>

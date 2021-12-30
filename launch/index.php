@@ -5,9 +5,13 @@
 	<?php
 		$json_backend = file_get_contents('../backend.json');
 		$json_config = file_get_contents('../config.json');
+		$json_comp_prof = file_get_contents('compute_profiles.json');
+		$json_net_prof = file_get_contents('network_profiles.json');
 
 		$m_backend = json_decode($json_backend);
 		$m_config = json_decode($json_config);
+		$m_comp_prof = json_decode($json_comp_prof);
+		$m_net_prof = json_decode($json_net_prof);
 	?>
 	<title>Generic App</title>
 </head>
@@ -19,6 +23,13 @@
 			<tr><th></th><th></th></tr>
 			<tr><td>Application Name:</td><td><input id="app_name" name="app_name" type="text" width="55"></td></tr>
 			<tr><td>Application Description:</td><td><input id="app_description" name="app_description" type="text" width="255" height="15"></td></tr>
+			<tr><td>DB Server Name:</td><td><input id="db_server_name" name="db_server_name" type="text" width="255" height="15"></td></tr>
+			<tr><td>DB Compute Profile:</td><td><input id="db_compute_profile" name="db_compute_profile" type="text" width="255" height="15"><select></select></td></tr>
+			<tr><td>DB Network Profile:</td><td><input id="db_network_profile" name="db_network_profile" type="text" width="255" height="15"><select></select></td></tr>
+			<tr><td>DB Refresh Cycle:</td><td><input id="db_refresh_cycle" name="db_refresh_cycle" type="text" width="255" height="15"></td></tr>
+			<tr><td>DB Clone Expiry:</td><td><input id="db_clone_expiry" name="db_clone_expiry" type="text" width="255" height="15"></td></tr>
+			<tr><td>MS Windows administrative user name:</td><td><input id="db_win_admin" name="db_clone_expiry" type="text" width="255" height="15"></td></tr>
+			<tr><td>MS Windows administrative user password:</td><td><input id="db_win_admin_pass" name="db_clone_expiry" type="text" width="255" height="15"></td></tr>
 			<tr><td>Username:</td><td><input id="app_username" name="app_username" type="text" width="255" height="15" value=""></td></tr>
 			<tr><td>Password:</td><td><input id="app_password" name="app_password" type="password" width="255" height="15" value=""></td></tr>
 			<tr><td><input id="btn_clear" name="btn_clear" type="button" value="CLEAR"></td><td><input id="btn_submit" name="btn_submit" type="button" value="SUBMIT" onclick="m_launchApplication(0)"></td></tr>

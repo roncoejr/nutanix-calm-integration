@@ -24,8 +24,11 @@ function m_launchApplication(v_form) {
 
 	rspObj.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
-			t_state = JSON.parse(JSON.stringify(this.responseText));
-			document.getElementById("infoPanel").innerHTML = t_state + ' : ' + this.readyState + ' : ' + this.status + ' : ' + this.responseText;
+			// var t_state = JSON.parse(this.responseText);
+			var t_state = JSON.parse(this.responseText);
+			// document.getElementById("infoPanel").innerHTML = t_state + ' : ' + this.readyState + ' : ' + this.status + ' : ' + this.responseText;
+			btn_refresh = '<input id="btn_refresh" name="btn_refresh" type="button" value="REFRESH" onclick="m_refreshRequestStatus(' +  t_state.status.request_id + ')"><br>';
+			document.getElementById("infoPanel").innerHTML = btn_refresh + '<table class="progressMon"><tr><th>Request ID</th><th>App ID</th><th>App Name</th></tr><tr><td>' + t_state.status.request_id + '</td><td>' + t_state.spec.app_name + '</td><td>' + t_state.spec.app_name + '</td></tr></table>';
 		}
 
 
