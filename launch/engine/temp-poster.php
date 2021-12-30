@@ -14,7 +14,7 @@
 
     // $req_data_raw = '{"spec":{"app_profile_reference":{"kind":"app_profile","name":"rcj_test_multi","uuid":"' . $req_data["uuid"] . '"},"app_name":"' . $req_data["app_name"] . '","app_description":"' . $req_data["app_description"] . '"}}';
 
-    $req_data_raw = array("spec" => array("app_profile_reference" => array("kind" => $req_data["kind"], "name" => $req_data["app_blueprint_name"], "uuid" => $req_data["app_uuid"]), "app_name" => $req_data["app_name"], "app_description" => $req_data["app_description"]));
+    $req_data_raw = array("status" => array("request_id": ""),"spec" => array("application_name":"","app_profile_reference" => array("kind" => $req_data["kind"], "name" => $req_data["app_blueprint_name"], "uuid" => $req_data["app_uuid"]),"description":"","resources" => array()),"api_version": "", "metadata" => array("kind": "", "project_reference" => array("kind": "project", "name": "", "uuid": "", "owner_reference" => array("kind": "user", "name": "", "uuid": ""), "name": "")));
 
     // $req_data_raw = file_get_contents('calm-api-data.json');
     $req_data_temp = json_encode($req_data_raw);
